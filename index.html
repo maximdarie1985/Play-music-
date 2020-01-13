@@ -3,7 +3,16 @@
   <head>
     <meta name='viewport' content='width=device-width, initial-scale=1'
     <title></title>
+<style>
+body {
+  background-image: url('data:image/jpeg;base64,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');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+</style>
     <script src="https://cdn.jsdelivr.net/npm/@magenta/music@1.0.0"></script>
+	
 	<script>
       // Instantiate model by loading desired config.
       const model = new mm.MusicVAE(
@@ -16,6 +25,7 @@
           .then((samples) => player.start(samples[0], 100));
       }
     </script>
+	
     <script src="tonal.min.js"></script>
     <script src="tone.min.js"></script>
     <script language="javascript" type="text/javascript" src="index.js"></script>
@@ -29,24 +39,49 @@
       body {font-family: 'Open Sans', sans-serif; font-size: 10px;}
       .container { padding-top: 10px;}
       button {max-width: 100%}
+	  
+	  body {
+  text-align: center;
+  background-color: grey;
+}
 
+.btn-group button {
+  background-color: #4CAF50; /* Green background */
+  border: 1px solid green; /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  width: 50%; /* Set a width if needed */
+  display: block; /* Make the buttons appear below each other */
+}
+
+.btn-group button:not(:last-child) {
+  border-bottom: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #3e8e41;
+}
     </style>
-  </head>
-  <meta charset='UTF-8'>
-  <body>
-  
-    <div class="container w-80">
-      <h1 class="text-center">Magenta.js MusicRNN Tutorial</h1>
-      <div class="d-flex justify-content-around">
-        <button class='btn btn-default center-block' id="original">
-          Original melody
-        </button>
-        <button class='btn btn-default center-block' id="generated">
-          Generated melody
-        </button>
-		
-		<button class='btn btn-default center-block' onclick="play()">Play Trio</button>
+	
+	<div class="container w-80">
+      <h1 class="text-center"> Play Music with Magenta.js</h1>
+      <div class="d-flex justify-content-around">         				
       </div>
     </div>
+  </head>
+  <meta charset='UTF-8'> 
+  <body> 
+  <h4 id='date'></h4>  
+        <div class="btn-group">
+        <button class='btn btn-default center-block' id="original">
+          Original Melody
+        </button>            
+        <button class='btn btn-default center-block' id="generated">
+          Generated Melody
+        </button>  
+       <button class='btn btn-default center-block' onclick="play()">Play Trio</button>     
+	  </div>    
   </body>
 </html>
